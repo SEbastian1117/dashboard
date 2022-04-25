@@ -1,0 +1,51 @@
+<mat-sidenav-container fullscreen class="bg">
+   <mat-sidenav #sidenav mode="push" class="bgl">
+     <mat-toolbar class="bglo">
+       <div class="space"></div>
+       <button mat-icon-button (click)="sidenav.toggle()">
+         <mat-icon>pets</mat-icon>
+       </button>
+     </mat-toolbar>
+     <mat-nav-list >
+      <div class="log"><img class="img-l" src="/assets/img/imagenes-protected/isonewsvg.svg" alt=""></div>
+     </mat-nav-list>
+     <mat-nav-list class="lish">
+       <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
+         <mat-icon mat-list-icon>home</mat-icon>
+         <span class="spanfont">home</span>
+       </a>
+     </mat-nav-list>
+     <mat-nav-list class="lish">
+         <a routerLink="./agregr" mat-list-item (click)="sidenav.toggle()">
+           <mat-icon mat-list-icon><img class="icondog" src="/assets/img/imagenes-protected/perritodepie.svg" alt="icon-perrito"></mat-icon>
+           <span class="spanfont">my pets</span>
+         </a>
+       </mat-nav-list>
+       <mat-nav-list class="lish">
+         <a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
+           <mat-icon mat-list-icon><img class="icondog" src="/assets/img/imagenes-protected/placa perrito.svg" alt="icon-perrito"></mat-icon>
+           <span class="spanfont">my services</span>
+         </a>
+       </mat-nav-list>
+   </mat-sidenav>
+   <mat-toolbar class="bgnav">
+     <button mat-icon-button (click)="sidenav.toggle()">
+       <mat-icon>menu</mat-icon>
+     </button>
+     <div class="space"></div>
+     <span routerLink="./listado" mat-list-item 
+(click)="logout()" >
+      <mat-icon mat-list-icon>logout</mat-icon>
+    </span>
+    <div class="mbs">
+      <span class="logto">logout</span></div>
+   </mat-toolbar>
+   <div class="container">
+     <router-outlet></router-outlet>
+   </div>
+   
+ </mat-sidenav-container>
+ 
+
+   
+
